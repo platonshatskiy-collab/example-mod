@@ -1,16 +1,16 @@
 {
-  "geode": "4.0.0",
-  "gd": "2.207",
-  "id": "gheteam.noclip_mod",
-  "version": "v1.0.0",
-  "name": "GheTeam GD",
-  "developer": "GheTeam",
-  "description": "NoClip Mod for Geode 4.10.0",
-  "settings": {
-    "noclip-switch": {
-      "name": "NoClip",
-      "type": "bool",
-      "default": false
-    }
-  }
+	"geode": "4.0.0",
+	"gd": "2.207",
+	"id": "gheteam.noclip_mod",
+	"version": "v1.0.0",
+	"name": "GheTeam GD",
+	"developer": "GheTeam",
+	"description": "Мой первый NoClip мод для Android",
+	"settings": {
+		"noclip-switch": {
+			"name": "Включить NoClip",
+			"type": "bool",
+			"default": false
+		}
+	}
 }

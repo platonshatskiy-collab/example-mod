@@ -24,7 +24,5 @@ jobs:
       - name: Build Mod
         uses: geode-sdk/build-geode-mod@main
         with:
-          bindings-checkout: false
-          combine: true
           target: ${{ matrix.config.target }}
           

@@ -3,17 +3,17 @@
 
 using namespace geode::prelude;
 
+// Модифицируем класс PlayLayer (где происходит игра)
 class $modify(MyPlayLayer, PlayLayer) {
+    
+    // Функция, которая вызывается при столкновении с объектом (смерти)
     void destroyPlayer(PlayerObject* player, GameObject* object) {
-        // Получаем значение переключателя из настроек
-        bool noclipEnabled = Mod::get()->getSettingValue<bool>("noclip-switch");
+        // Если мы просто ничего не напишем внутри, 
+        // стандартная функция смерти не вызовется.
+        // Это и есть самый чистый NoClip.
         
-        if (noclipEnabled) {
-            // Если ноклип включен, мы просто выходим из функции, не вызывая смерть
-            return;
-        }
-
-        // Если выключен — вызываем оригинальную функцию смерти
-        PlayLayer::destroyPlayer(player, object);
+        // Но добавим проверку: если это не шип, а портал или монета,
+        // лучше оставить стандартную логику (по желанию).
+        // Для простого NoClip оставляем пустым:
     }
 };

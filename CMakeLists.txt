@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(GheTeamMod)
+project(NoClipMod)
 
 find_package(Geode REQUIRED)
 

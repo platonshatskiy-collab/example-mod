@@ -10,6 +10,8 @@ jobs:
       - name: Build Mod
         uses: geode-sdk/build-geode-mod@main
         with:
+          # Мы используем 'combine' (без D), как просит система в логах
           combine: true
+          # Мы четко указываем цель
           target: Android
           

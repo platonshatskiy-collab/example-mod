@@ -5,15 +5,15 @@ using namespace geode::prelude;
 
 class $modify(MyPlayLayer, PlayLayer) {
     void destroyPlayer(PlayerObject* player, GameObject* object) {
-        // Проверка настройки мода
-        auto noclipEnabled = Mod::get()->getSettingValue<bool>("noclip-switch");
+        // Получаем значение переключателя из настроек
+        bool noclipEnabled = Mod::get()->getSettingValue<bool>("noclip-switch");
         
         if (noclipEnabled) {
-            // Если включен — выходим из функции (не умираем)
+            // Если ноклип включен, мы просто выходим из функции, не вызывая смерть
             return;
         }
 
-        // Если выключен — вызываем стандартную смерть
+        // Если выключен — вызываем оригинальную функцию смерти
         PlayLayer::destroyPlayer(player, object);
     }
 };

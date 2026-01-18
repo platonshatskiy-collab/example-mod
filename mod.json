@@ -5,13 +5,12 @@
   "version": "v1.0.0",
   "name": "GheTeam GD",
   "developer": "GheTeam",
-  "description": "Первое меню от GheTeamChapter!",
+  "description": "NoClip Mod for Geode 4.10.0",
   "settings": {
     "noclip-switch": {
       "name": "NoClip",
       "type": "bool",
-      "default": false,
-      "description": "Позволяет летать сквозь стены"
+      "default": false
     }
   }
 }

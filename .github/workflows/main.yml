@@ -12,6 +12,5 @@ jobs:
         with:
           # Мы используем 'combine' (без D), как просит система в логах
           combine: true
-          # Мы четко указываем цель
           target: Android
           

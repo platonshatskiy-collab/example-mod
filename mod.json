@@ -4,17 +4,14 @@
 	"version": "v1.0.0",
 	"name": "NoClip Mod",
 	"developer": "GheTeam",
-	"description": "Noclip for GD by GheTeamChapter",
+	"description": "Noclip for GD by GheTeamChapter. Slaughterhouse Slayer edition.",
 	"repository": "https://github.com/GheRePrime",
 	"settings": {
 		"noclip-switch": {
 			"name": "Enable Noclip",
+			"description": "Allows you to pass through objects",
 			"type": "bool",
 			"default": false
 		}
-	},
-	"resources": {
-		"files": []
 	}
 }
-

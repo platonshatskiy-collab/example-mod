@@ -1,9 +1,20 @@
 {
-	"geode": "4.0.0",
-	"gd": "2.207",
+	"geode": "2.0.0-beta.1",
 	"id": "gheteam.noclip_mod",
 	"version": "v1.0.0",
-	"name": "GheTeam GD",
+	"name": "NoClip Mod",
 	"developer": "GheTeam",
-	"description": "Simple NoClip"
+	"description": "Noclip for GD by GheTeamChapter",
+	"repository": "https://github.com/GheRePrime",
+	"settings": {
+		"noclip-switch": {
+			"name": "Enable Noclip",
+			"type": "bool",
+			"default": false
+		}
+	},
+	"resources": {
+		"files": []
+	}
 }
+

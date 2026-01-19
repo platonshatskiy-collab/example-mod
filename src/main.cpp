@@ -1,19 +1,15 @@
 #include <Geode/Geode.hpp>
-#include <Geode/modify/PlayLayer.hpp>
+#include <Geode/modify/PlayerObject.hpp>
 
 using namespace geode::prelude;
 
-// Модифицируем класс PlayLayer (где происходит игра)
-class $modify(MyPlayLayer, PlayLayer) {
-    
-    // Функция, которая вызывается при столкновении с объектом (смерти)
-    void destroyPlayer(PlayerObject* player, GameObject* object) {
-        // Если мы просто ничего не напишем внутри, 
-        // стандартная функция смерти не вызовется.
-        // Это и есть самый чистый NoClip.
+class $modify(PlayerObject) {
+    void destroyPlayer(bool p0, GameObject* p1) {
+        // Проверяем настройку через Mod::get()
+        bool noclipEnabled = Mod::get()->getSettingValue<bool>("noclip-switch");
         
-        // Но добавим проверку: если это не шип, а портал или монета,
-        // лучше оставить стандартную логику (по желанию).
-        // Для простого NoClip оставляем пустым:
+        if (!noclipEnabled) {
+            PlayerObject::destroyPlayer(p0, p1);
+        }
     }
 };
